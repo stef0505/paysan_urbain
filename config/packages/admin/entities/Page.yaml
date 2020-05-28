@@ -1,0 +1,12 @@
+easy_admin:
+  entities:
+    Page: 
+      class: App\Entity\Page
+      list:
+        filters: ['entreprise']
+      new:
+        title: "Création d'une nouvelle page"
+        fields:
+          - { property: 'name', type: 'text', label: 'Nom de la page' }
+          - { property: 'online', label: 'Online' }
+          - { property: 'content', label: 'Contenu' }

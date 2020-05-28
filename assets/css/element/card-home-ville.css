@@ -1,0 +1,61 @@
+
+/* SECTION 2 ______ HISTOIRE */
+#card-home-ville {
+    width: 100%;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+#card-home-ville .row {
+    width: 100%;
+}
+
+#card-home-ville .card{
+    margin: 20px;
+}
+
+#card-home-ville .card-body {
+    width: 400px;
+    min-height: 375px;
+}
+
+#card-home-ville .card-title{
+    height: 60px;
+}
+
+hr {
+    /* margin-top: 60px; */
+    width: 35%; 
+    margin: 5px 0 20px 0;
+    padding: 0;
+    border: none;
+    height: 5px; 
+    background-color: rgb(170, 18, 150);
+}
+
+.hr_footer {
+    margin-top: 50px;
+    background: #BDD360;
+    height: 1px;
+    width: 100%;
+}
+
+#card-home-ville .card {
+    
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#card-home-ville .btn {
+    background: rgb(61, 211, 41);
+    background-image: linear-gradient(-90deg, rgb(240, 236, 24), rgb(70, 224, 32));
+    color: black;
+}
+
+#card-home-ville .btn:hover {
+    background: rgb(61, 211, 41);
+    background-image: linear-gradient(-90deg, rgb(70, 224, 32),  rgb(70, 230, 48));
+    color: black;
+    
+}

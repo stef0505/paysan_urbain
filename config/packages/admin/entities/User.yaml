@@ -1,0 +1,44 @@
+easy_admin:
+  entities:
+    User: 
+      class: App\Entity\User
+      controller: App\Controller\AdminController
+      disable: 'search'
+      
+      # edit:
+      #   title: "Modification d'utilisateur"
+      #   fields:
+      #     - { property: 'firstName', type: 'text', label: 'Nom' }
+      #     - { property: 'lastName', type: 'text', label: 'Prénom' }
+      #     - { property: 'email', type: 'email', label: 'email' }
+      #     - { property: 'entreprise', type: 'text', label: 'Entreprise' }
+      #     - { property: 'createAt', type: 'text', label: 'Crée le' }
+      new:
+        title: "Création d'un nouveau membre d'administration"
+        fields:
+          - { property: 'firstName', type: 'text', label: 'Nom' }
+          - { property: 'lastName', type: 'text', label: 'Prénom' }
+          - { property: 'email', type: 'email', label: 'email' }
+          - { property: 'password', type: 'password', label: 'Mot de passe' }
+          - { property: 'entreprise', label: 'Entreprise' }
+      list:
+        title: 'Tableau des utilisateurs' 
+        fields: 
+          - { property: 'firstName', type: 'text', label: 'Nom' }
+          - { property: 'lastName', type: 'text', label: 'Prénom' }
+          - { property: 'email', type: 'email', label: 'email' }
+          - { property: 'entreprise',  label: 'Entreprise' }
+          - { property: 'createAt', type: 'date', label: 'Crée le' }
+        # filters: 
+        #   - {property: 'firstName', type: 'text', label: 'Nom'}
+        #   - {property: 'lastName', type: 'text', label: 'Prénom'}
+        #   - { property: 'entreprise', type: 'text', label: 'Entreprise' }          
+        #   - {property: 'createAt', type: 'date', label: 'Crée le'}
+        actions: # allowed actions
+          - { name: 'show', icon: 'search', label: 'Afficher', css_class: 'btn btn-secondary' }
+          - {name: 'edit', icon: 'pencil', label: 'edit', css_class: 'btn btn-secondary'}
+          - {name: 'delete', icon: 'trash', label: 'trash', css_class: 'btn btn-danger'}
+      
+        
+        
+      

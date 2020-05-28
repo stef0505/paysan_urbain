@@ -1,0 +1,146 @@
+@import "~bootstrap/scss/bootstrap";
+
+
+/**
+* NAV_BAR
+**/
+@import "./element/navbar-home.css";
+
+
+
+/**
+* Baniere
+**/
+@import "./element/baniere.css";
+
+
+/**
+* CARDS
+**/
+@import "./element/card-home-page.css";
+@import "./element/card-mission.css";
+@import "./element/card-home-ville.css";
+@import "./element/card-recette.css";
+@import "./element/card-mission.scss";
+@import "./element/equipe-ville.css";
+
+
+/**
+* TABLE
+**/
+@import "./element/table-micropousse.css";
+
+
+
+/**
+* TITLES
+**/
+
+@import "./element/title-micropousse.css";
+@import "./element/caroussel-block-txt.css";
+@import "./element/contact.css";
+
+
+
+
+
+
+/**
+* FOOTER
+**/
+@import "./element/footer-home-page.css";
+@import "./element/footer-ville.css";
+
+
+
+/**
+* OTHERS
+**/
+
+@import "./element/btn-home-page.css";
+
+
+section {
+    margin-bottom: 120px;
+}
+
+#login {
+    a {
+        color: black;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: white;
+    }
+
+    button {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        background-color: #fff;
+        color: #000;
+        border-color: rgb(170, 18, 150);
+    }
+
+    button:hover {
+        background-color: rgb(170, 18, 150);
+
+        a {
+            color: white;
+        }
+    }
+}
+
+#form_login {
+    width: 70%;
+
+    input {
+        width: 100%;
+        padding: 5%;
+        margin: 5%;
+    }
+
+    button {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        background-color: #fff;
+        color: #000;
+        border-color: rgb(170, 18, 150);
+    }
+
+    button:hover {
+        background-color: rgb(170, 18, 150);
+        color: white;
+    }
+}
+
+#registration {
+    label {
+        display: none;
+    }
+
+    input {
+        margin: 5%;
+    }
+
+
+    button {
+        text-transform: uppercase;
+        margin-top: 30px;
+        background-color: #fff;
+        color: #000;
+        border-color: rgb(170, 18, 150);
+    }
+
+    button:hover {
+        background-color: rgb(170, 18, 150);
+        color: white;
+    }
+
+    ul {
+        width: 100%;
+        color: red;
+        font-size: 10px;
+    }    
+}
+

@@ -1,0 +1,27 @@
+<section id="nos-recettes">
+    {% for i in titleRecette %}
+        
+    <div id="block-txt-recette" class=" m-auto d-flex flex-column justify-content-center align-items-center">
+        <h2 class="mt-2"> {{ i.title }} </h2>
+        <p class="mt-2"> {{ i.contenu }} </p>
+        <hr>
+    </div>
+    {% endfor %}
+
+
+
+    <div id="container-card-recette" class="row d-flex justify-content-around align-items-center pt-md-3 ">
+
+
+        {% for i in recette %}
+        <div class="card m-5" style="width: 18rem;">
+            <img class="card-img-top" src="{{ asset('build/images/' ~ i.imageName) }}" alt="Recette de {{ i.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ i.name }}</h5>
+                <p class="card-text"> {{ i.description|truncate (100) }} </p>
+                <a href="#" class="btn btn-primary">En savoir plus</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

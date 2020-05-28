@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+
+
+
+{% block body %}
+
+{% include "/element/baniere.html.twig" %}
+{% include "/element/title-micropousse.html.twig" %}
+
+{% include "/element/table-micropousse.html.twig" %}
+{% include "/element/card-recette.html.twig" %}
+
+
+{% block javascript %}
+<script src="build/micropousse.js"></script>
+{% endblock javascript %}
+{% endblock %}

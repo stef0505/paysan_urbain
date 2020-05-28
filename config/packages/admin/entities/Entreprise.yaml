@@ -1,0 +1,16 @@
+easy_admin:
+  entities:
+    Entreprise: 
+      class: App\Entity\Entreprise
+      controller: App\Controller\AdminController
+      list:
+        actions: # allowed actions
+          - { name: 'show', icon: 'search', label: 'Afficher', css_class: 'btn btn-secondary' }
+          - {name: 'edit', icon: 'pencil', label: 'edit', css_class: 'btn btn-secondary'}
+          - {name: 'delete', icon: 'trash', label: 'trash', css_class: 'btn btn-danger'}
+      new:
+        title: "Création d'un nouveau Paysan Urbain"
+        fields:
+          - { property: 'name', type: 'text', label: 'Nom' }
+          - 'online'
+          # - { property: 'online', type: 'toggle', label: 'Online' }

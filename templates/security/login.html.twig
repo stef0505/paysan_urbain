@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<section id="login" class="d-flex flex-column align-items-center">
+    <h3 class="p-5 text-center" style="color: rgb(170, 18, 150);">ADMINISTRATION</h3>
+    <img src="/assets/img/logoPaysanUrbain.jpg" alt="LOGO PAYSAN URBAIN" class="p-5">
+
+    <form id="form_login" action="{{ path('security_login') }}" method="post" class="d-flex flex-column align-items-center p-5">
+        <div class="content-form w-25 d-flex flex-column align-items-center">
+            <input type="text" name="_username" id="name-login-form" placeholder="Email" required>
+            <input type="password" name="_password" id="password-login-form" placeholder="Mot de passe" required>
+        </div>
+        <div class="submit-form">
+            <button type="submit">connexion</button>
+        </div>
+    </form>
+    <button><a href="{{ path('home_page') }}">Accédez au site</a></button>
+
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+    <button><a href="{{ path('easyadmin') }}">Accédez au Panel Admin</a></button>
+        
+    {% endif %}
+</section>
+{% endblock body %}

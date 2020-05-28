@@ -1,0 +1,23 @@
+
+#card-homepage{
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+#card-homepage .card {
+    margin-top: 50px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+#card-homepage hr {
+    margin-top: 60px;
+    width: 35%; border: none;
+    height: 3px; 
+    background-color: rgb(170, 18, 150);
+}
+#card-homepage .card hr{
+    margin:10px;
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+easy_admin:
+  entities:
+    Content: 
+      class: App\Entity\Content
+      list: 
+        # fields: 
+        #   - 
+        # dql_filter: "entity.page.entreprise"
+        # filters : 
+        #   [
+        #     {property: 'page', type: array },
+        #     {property: 'name', type: array },
+        #   ]

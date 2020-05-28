@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+
+    {% block stylesheets %}
+    {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+</head>
+
+<body style="margin: 0; padding: 0 10% 0 10%;">
+    <header>
+        {% block header %}
+        {# NavBar need responsive #}
+
+        {% if app.request.pathinfo == '/' %}
+        {% include "/element/navbar-home.html.twig" %}
+        {% elseif (app.request.pathinfo == '/loginAdmin' or app.request.pathinfo == '/register') %}        
+        {% else %}
+        {% include "/element/navbar-ville.html.twig" %}
+        {% endif %}
+        {% endblock header %}
+    </header>
+
+    <body>
+        {#<h3 style="margin-top: 150px;">{{app.request.pathinfo}}</h3>#}
+        {% block body %}{% endblock %}
+
+    </body>
+
+
+    <footer>
+        {% block footer %}
+            {% if app.request.pathinfo == '/' %}
+                {% include "/element/footer-home-page.html.twig" %}
+            {% elseif (app.request.pathinfo == '/loginAdmin' or app.request.pathinfo == '/register') %}        
+
+            {% else %}
+                {% include "/element/footer-ville.html.twig" %}
+            {% endif %}
+        {% endblock footer %}
+    </footer>
+
+
+</body>
+{% block javascripts %}
+{{ encore_entry_script_tags('app') }}
+{% endblock %}
+
+
+
+</html>

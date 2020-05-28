@@ -1,0 +1,18 @@
+easy_admin:
+  entities:
+    Equipe: 
+      class: App\Entity\Equipe
+      label: 'Equipe'
+      list:
+        filters: ['entreprise']
+        actions: # allowed actions
+          - { name: 'show', icon: 'search', label: 'Afficher', css_class: 'btn btn-secondary' }
+          - {name: 'edit', icon: 'pencil', label: 'edit', css_class: 'btn btn-secondary'}
+          - {name: 'delete', icon: 'trash', label: 'trash', css_class: 'btn btn-danger'}
+      new:
+        title: "Création d'un nouveau d'équipe"
+        fields:
+          - { property: 'name', type: 'text', label: 'Nom' }
+          - { property: 'description', type: 'text', label: 'description' }
+          - { property: 'imageName', type: 'text', label: 'path image' }
+          - { property: 'entreprise', label: 'Entreprise' }

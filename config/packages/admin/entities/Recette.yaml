@@ -1,0 +1,16 @@
+easy_admin:
+  entities:
+    Recette: 
+      class: App\Entity\Recette
+      list:
+        actions: # allowed actions
+          - { name: 'show', icon: 'search', label: 'Afficher', css_class: 'btn btn-secondary' }
+          - {name: 'edit', icon: 'pencil', label: 'edit', css_class: 'btn btn-secondary'}
+          - {name: 'delete', icon: 'trash', label: 'trash', css_class: 'btn btn-danger'}
+      #   fields:
+      #       - "id"
+      #       - "Name"
+      #       - "Description"
+      #       - { property: 'image', type: 'image', base_path: "%app.path.recettes%"}
+      #       - "Entreprise"
+     

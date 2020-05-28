@@ -1,0 +1,55 @@
+
+/* SECTION 1 ______ HISTOIRE */
+#block-txt-caroussel {
+    width: 100%;
+    margin-top: 120px;
+    /* margin-bottom: 120px; */
+}
+
+#block-txt-caroussel .row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+/* CAROUSSEL */
+#caroussel{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#carouselExampleIndicators {
+    height: 380px;
+}
+
+/* BLOCK-TEXT */
+
+#block-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SECTION 2 ______ HISTOIRE */
+#histoire-section-2 {
+    width: 100%;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+
+#histoire-section-2 .row {
+    width: 100%;
+}
+
+#histoire-section-2 .card{
+    margin: 20px;
+}
+
+#histoire-section-2 .card-body {
+    width: 400px;
+    min-height: 375px;
+}

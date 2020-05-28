@@ -1,0 +1,28 @@
+{% block body %}
+<section id="card-homepage">
+    <div class="w-100 text-center mb-5" style="margin-top: 100px;">
+        <iframe width="700" height="394" src="https://www.youtube.com/embed/aRAVQfUn9bE" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <h2 class="text-center ">Ce qui nous pousse à nous lever le matin </h2>
+    <hr style="width: 50%; margin:auto;" class="mb-5">
+
+    <div class="container">
+        <div class="card-deck">
+
+            {% for i in cardHome %}
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ i.title|upper }}</h5>
+                    <hr style="margin:auto;" class="mb-5">
+                    <p class="card-text">{{ i.contenu }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</section>
+<hr style="margin:auto;" class="mt-5 hr_footer">
+
+{% endblock body %}

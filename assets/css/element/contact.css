@@ -1,0 +1,57 @@
+border {
+    box-shadow: 1px 1px 10px black;
+}
+
+.custom-select {
+    background-color: rgb(28, 192, 61);
+    width: 30%;
+}
+
+.fa {
+    width: 100px;
+    height: 120px;
+    color: brown;
+}
+
+p {
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+.titi {
+    margin-top: 10px;
+}
+
+.map {
+    padding: 0;
+    margin-bottom: 15px;
+
+}
+
+.border {
+    margin-top: 10px;
+}
+/* .titre {
+    text-align: left;
+    padding-left: 150px;
+} */
+.purple_line {
+    width: 60%;
+    height: 5px;
+    background: #772953;
+    margin-left: auto;
+    margin-right: auto;
+}
+.label {
+    margin-bottom: 2px;
+}
+h1 {
+    color: rgb(61, 211, 41)
+}
+h6 {
+    color:purple;
+}
+h4 {
+    padding-top: 120px;
+    color: rgb(61, 211, 41)
+}

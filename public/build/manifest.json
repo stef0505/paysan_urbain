@@ -1,0 +1,19 @@
+{
+  "build/app.css": "/build/app.css",
+  "build/app.js": "/build/app.js",
+  "build/micropousse.js": "/build/micropousse.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/vendors~app~micropousse.js": "/build/vendors~app~micropousse.js",
+  "build/images/2.jpg": "/build/images/2.72f133ea.jpg",
+  "build/images/baniere.png": "/build/images/baniere.7fe71ada.png",
+  "build/images/default.jpg": "/build/images/default.5e48d9f7.jpg",
+  "build/images/foliederadis.png": "/build/images/foliederadis.6667a588.png",
+  "build/images/melimelo.jpg": "/build/images/melimelo.84ef8408.jpg",
+  "build/images/moutarde.png": "/build/images/moutarde.79892e34.png",
+  "build/images/pate.jpg": "/build/images/pate.74708186.jpg",
+  "build/images/poisvert.jpg": "/build/images/poisvert.071f6fb1.jpg",
+  "build/images/roquette.jpg": "/build/images/roquette.50506e58.jpg",
+  "build/images/sandwich.jpg": "/build/images/sandwich.40ab490b.jpg",
+  "build/images/tournesol.jpg": "/build/images/tournesol.7973b91a.jpg",
+  "build/images/user.png": "/build/images/user.d89ce795.png"
+}

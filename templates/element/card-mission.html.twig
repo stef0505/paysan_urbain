@@ -1,0 +1,74 @@
+{% block stylesheets %}{% endblock %}
+<!-- <link rel="stylesheet" href="assets/css/element/card-mission.css"> -->
+{% block body %}
+<section>
+    <div id="block-text" class="w-75 m-auto">
+        {% for i in titleMission %}
+            
+        <h2 class="mt-2">{{i.title}}</h2>
+        <p class="mt-2">{{ i.contenu }}</p>
+            {% endfor %}
+
+            <hr class="mb-5 mt-5">
+    </div>
+
+    <div class="container" id="card-mission">
+        {% for i in cardMission %}
+
+
+        <!--  Première carte   -->
+        <div class="cardContainer inactive">
+            <div class="card">
+                <div class="side front">
+                    <div class="img img1"></div>
+                    <div class="info">
+                        <h4> {{ i.title }} </h4>
+                        <p>{{ i.contenu|truncate (100) }}</p>
+                    </div>
+                </div>
+                <div class="side back">
+                    <div class="info">
+                        <h6>{{ i.title }}</h6>
+                        <hr class="mb-5">
+                        <p>{{ i.contenu}} </p>
+                        {% if app.request.pathinfo == "/"~ entreprisesPu|lower ~ route %}
+                        <div class="btn btn-success">
+                            <a href="{{ path('contact', {nameEntreprise: entreprisesPu|lower }) }}">Nous contacter</a>
+                            <svg fill="#333" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+                                <path d="M0-.25h24v24H0z" fill="none" /></svg>
+                        </div>
+                        {% endif %}
+                        <!-- <div class="btn">
+                        <h4>Nous Contacter</h4>
+                        <svg fill="#333"  viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+                            <path d="M0-.25h24v24H0z" fill="none" /></svg>
+                    </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="trait"></div> -->
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- Script JavaScript -->
+<script>
+    const cards = document.querySelectorAll('.card');
+
+    function transition() {
+        if (this.classList.contains('active')) {
+            this.classList.remove('active')
+        } else {
+            this.classList.add('active');
+        }
+    }
+
+    cards.forEach(card => card.addEventListener('click', transition));
+</script>
+{% endblock body %}

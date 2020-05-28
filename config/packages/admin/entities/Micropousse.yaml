@@ -1,0 +1,27 @@
+easy_admin:
+  entities:
+    Micropousse: 
+      class: App\Entity\Micropousse
+      list:
+        actions: # allowed actions
+          - { name: 'show', icon: 'search', label: 'Afficher', css_class: 'btn btn-secondary' }
+          - {name: 'edit', icon: 'pencil', label: 'edit', css_class: 'btn btn-secondary'}
+          - {name: 'delete', icon: 'trash', label: 'trash', css_class: 'btn btn-danger'}
+        # fields:
+        filters: ['entreprise']
+      #   fields:
+      #     - "id"
+      #     - "Name"
+      #     - "Description"
+      #     - { property: 'image', type: 'image', base_path: "%app.path.micropousses%"}
+      #     - "Entreprise"
+      # form:
+      #   fields:
+      #     # - "id"
+      #     - "Name"
+      #     - "Description"
+      #     - { property: 'imageFile', type: 'vich_image', type_options: { required: true } }          
+      #     - "image_name"
+      #     # - "Datetime"
+      #     - "Entreprise"
+

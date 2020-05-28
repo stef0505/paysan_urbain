@@ -1,0 +1,34 @@
+{% block stylesheets %}
+{% endblock stylesheets %}
+
+{% block body %}
+    
+<section id="equipe-ville" class="container">
+        <div class=" m-auto d-flex flex-column justify-content-center align-items-center">
+            <h2 class="mt-2">Fièr(e) d'être Paysan(ne)s !</h2>
+            <hr class="equipe">
+        </div>
+        <div class="container" id="container-membre">
+            <div class="row" id="card-membres">
+                {% for xMember in membreEquipe %}
+                    
+                <!-- Team member -->
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p><img class=" img-fluid"
+                                src="{{ asset('build/images/user.png') }}"
+                                alt="Photo de {{ xMember.name }}"></p>
+                        <h4 class="card-title pt-5" >{{ xMember.name|replace({' ': '\n'})|nl2br }}</h4>
+ 
+
+                        <p class="card-text">{{ xMember.description }}</p>
+                    </div>
+                </div>
+                <!-- ./Team member -->
+                {% endfor %}
+            </div>
+        </div>
+    
+    
+    </section>
+{% endblock body %}

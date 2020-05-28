@@ -1,0 +1,22 @@
+section#btn-homepage{
+    width: 100%;
+    height: auto;
+    /* background-color: #E48951; */
+    margin-bottom: 0!important;
+}
+
+#btn-homepage h3{
+    text-transform: uppercase;
+}
+
+#btn-homepage a { 
+    margin-bottom: 30px;
+    background-color: #fff;
+    color: #000;
+    border-color: rgb(170, 18, 150);
+}
+
+#btn-homepage a:hover {
+    background-color: rgb(170, 18, 150);
+    color: white;
+}

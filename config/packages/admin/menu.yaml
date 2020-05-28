@@ -1,0 +1,15 @@
+easy_admin:
+  design:
+    # brand_color: '#MYHEXA'
+    menu: ['User', 'Entreprise', 'Micropousse', 'Recette', 'Equipe', 'Page', 'Content']
+      #   children:
+      #         - {entity: 'User', label: 'Users', permission: ['ROLE_SUPER_ADMIN', 'ROLE_ADMIN']}
+      #         - {entity: 'Entreprise', label: 'Entreprises', permission: ['ROLE_SUPER_ADMIN', 'ROLE_ADMIN']}
+      #         # - {entity: 'Page', label: 'Pages', permission: ['ROLE_SUPER_ADMIN', 'ROLE_ADMIN']}
+      #         # - {entity: 'Element', label: 'Elements', permission: 'ROLE_SUPER_ADMIN'}
+      #         # - {entity: 'Content', label: 'Contents', permission: ['ROLE_REDACTOR','ROLE_SUPER_ADMIN', 'ROLE_ADMIN']}
+      #         # - {entity: 'Equipe', label: 'Equipe',permission: ['ROLE_SUPER_ADMIN', 'ROLE_ADMIN']}
+      #         - {entity: 'Micropousse', label: 'Micropousses', permission: ['ROLE_SUPER_ADMIN', 'ROLE_ADMIN','ROLE_REDACTOR']}
+      #         - {entity: 'Recette', label: 'Recettes', permission: [ROLE_REDACTOR, 'ROLE_SUPER_ADMIN', 'ROLE_ADMIN']}
+
+     

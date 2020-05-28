@@ -1,0 +1,56 @@
+security:
+    
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        in_memory: 
+            memory:
+        
+        in_database:
+             entity:
+                class: App\Entity\User
+                property: email
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            
+            provider: in_database
+
+            form_login:
+                login_path: security_login
+                # L'endroit que je dois appeller pour vérifier les informations du formulaire de login
+                # On va appeller la même route pour afficher le formulaire et vérifier les infos
+                check_path: security_login
+                default_target_path: easyadmin
+                always_use_default_target_path: true
+                failure_path: security_login
+
+
+            logout:
+                path: security_logout
+                target: security_login #a changer par l'index du site
+
+            # activate different ways to authenticate
+            # https://symfony.com/doc/current/security.html#firewalls-authentication
+
+            # https://symfony.com/doc/current/security/impersonating_user.html
+            # switch_user: true
+    
+    role_hierarchy:
+        ROLE_CONTENT:       [ROLE_USER]
+        ROLE_ADMIN:         [ROLE_PROPRIETAIRE]
+        ROLE_SUPERADMIN:    [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        #  - { path: ^/admin, roles: ROLE_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/loginAdmin, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: ['ROLE_SUPER_ADMIN', 'IS_AUTHENTICATED_ANONYMOUSLY'] }
+        - { path: ^/admin/, role: ['ROLE_SUPER_ADMIN'] }

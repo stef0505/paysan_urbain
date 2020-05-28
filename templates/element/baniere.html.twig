@@ -1,0 +1,29 @@
+{% block stylesheets %}
+<!-- <link rel="stylesheet" href="assets/css/element/baniere.css"> -->
+{% endblock %}
+
+{% block body %}
+<section id="baniere" style="margin: 160px 0 60px 0;">
+    <div id="baniereTitle" >
+        <h1>LE PAYSAN URBAIN</h1>
+        {% if app.request.pathinfo == "/" %}
+        
+        {% else %}
+        {% if app.request.pathinfo == "/"~ entreprisesPu|lower ~ route %}        
+        <h3>{{ entreprisesPu }}</h3>  
+        {% endif %}
+
+        {% endif %}
+        <p>Producteur de micro-pousses agroécologiques, locales et solidaires</p>
+    </div>
+    <img src="{{ asset('build/images/baniere.png') }}" alt="Banière de la page représentant un gros plan de micro-pousses">
+    <div class="scroll-downs">
+        <div class="mousey">
+            <div class="scroller"></div>
+        </div>
+    </div>
+    
+</section>
+
+
+{% endblock body %}

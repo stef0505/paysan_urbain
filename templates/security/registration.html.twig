@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<section id="registration" class="d-flex flex-column align-items-center">
+    
+    <h3 class="p-1 text-center" style="color: rgb(170, 18, 150);">Inscription Admin</h3>
+    <img src="/assets/img/logoPaysanUrbain.jpg" alt="LOGO PAYSAN URBAIN" class="p-5">
+
+    {{ form_start(form) }}
+    <div class="w-100 d-flex flex-column align-items-center p-5">
+        <div class="content-form w-25 d-flex flex-column align-items-center">
+            {{ form_row(form.firstName, {'attr': {'placeholder': 'Nom'}}) }}
+            {{ form_row(form.lastName, {'attr': {'placeholder': 'Prénom'}}) }}
+            {{ form_row(form.email, {'attr': {'placeholder': 'Email '}}) }}
+            {{ form_row(form.password, {'attr': {'placeholder': 'Mot de Passe '}}) }}
+            {{ form_row(form.confirm_password, {'attr': {'placeholder': 'Confirmer Mot de passe '}}) }}
+            {{ form_row(form.entreprise, {'attr': {'placeholder': 'Selectionner un Lieu', 'name': 'entreprise'}}) }}
+        </div>
+        <div class="submit-form">
+            <button type="submit">SEND</button>
+        </div>
+    </div>
+{{ form_end(form) }}
+
+</section>
+{% endblock body %}

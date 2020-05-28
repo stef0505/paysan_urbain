@@ -1,0 +1,120 @@
+
+
+/* NAVIGATION */
+
+nav {
+    /* height: 110px; */
+    margin: 0 auto;
+    background: rgb(61, 211, 41);
+    /* padding: 50px 0; */
+    padding: 0 10% 0 10%;
+    box-shadow: 0px 2px 6px #d1cece;
+}
+.success-color {
+    background: rgb(61, 211, 41);
+}
+.navbar-brand img {
+    object-fit: contain;
+    /* height: 110px; */
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: rgb(255, 251, 251);
+    /* font-weight: 800; */
+    /* text-transform: uppercase; */
+    margin: 0 10px;
+}
+
+nav a,
+nav a:after,
+nav a:before {
+    transition: all .5s;
+}
+
+nav a:hover {
+    color: rgb(230, 52, 191);
+}
+
+
+/* stroke */
+nav.stroke a,
+nav.fill a {
+    position: relative;
+}
+
+nav.stroke a:after,
+nav.fill a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: rgb(10, 10, 10);
+    height: 1.5px;
+    border:0;
+}
+
+nav.stroke a:hover:after {
+    width: 100%;
+}
+
+nav.fill a {
+    transition: all 2s;
+}
+
+nav.fill a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+
+nav.fill a:hover {
+    color: #fff;
+    z-index: 1;
+}
+
+nav.fill a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+/* On montre le premier texte */
+.text-base{
+    opacity:1;
+ }
+ /* On cache le second texte */
+ .text-hover{
+    display:none;
+ }
+ /* On fait disparaitre le premier texte au passage de la souris. */
+ .button:hover span.text-base{
+    opacity:0;
+ }
+ /* On fait apparaitre le second texte au passage de la souris. */
+ .button:hover span.text-hover{
+    display:inherit;
+    position:absolute;
+ }
+
+ #navbarSupportedContent{
+     display: flex;
+     justify-content: flex-end;
+ }

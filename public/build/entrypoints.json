@@ -1,0 +1,21 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~app~micropousse.js",
+        "/build/app.js"
+      ],
+      "css": [
+        "/build/app.css"
+      ]
+    },
+    "micropousse": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors~app~micropousse.js",
+        "/build/micropousse.js"
+      ]
+    }
+  }
+}
